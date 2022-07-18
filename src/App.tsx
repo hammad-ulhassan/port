@@ -23,6 +23,9 @@ import {
   skills,
   education,
   linkedin,
+  myResumeText,
+  myNumber,
+  myEmail,
 } from "./shared/constants";
 
 //TODO clean up
@@ -35,8 +38,26 @@ function App() {
       <HomePageLayout>
         <Header>
           <LRPads>
-            <div style={{ display: "flex" }}>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                flexDirection: "row",
+              }}
+            >
               <LogoText>{capital(`hammad`)}</LogoText>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "flex-start",
+                  gap: "5%",
+                  flexDirection: "row",
+                }}
+              >
+                <LogoText>{myEmail}</LogoText>
+                <LogoText>{myNumber}</LogoText>
+                <LogoText>{capital(myResumeText)}</LogoText>
+              </div>
             </div>
           </LRPads>
         </Header>
@@ -49,7 +70,7 @@ function App() {
                 justifyContent: "space-between",
                 alignItems: "flex-start",
                 padding: "var(--p05) 0",
-                rowGap: "5%"
+                rowGap: "5%",
               }}
             >
               <MainText>{capital(mainStr)}</MainText>
