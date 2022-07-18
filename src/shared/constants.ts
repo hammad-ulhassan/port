@@ -1,5 +1,9 @@
-const mainStr: string = `we work with cutting edge partners to deliver new research & insights on the state of play in the uk gambling and gaming sector.`;
+const mainStr: string = `i am a JS fullstack developer with over 2 years of experience`;
 
-const subStr: string = `Action Against Gambling Harms is a registered UK charity working to uncover and encourage research in the gambling and gaming sector, highlighting the potential harms associated with the industry.`;
+const skills: string = `Angular2, ReactJS, NodeJS`;
 
-export { mainStr, subStr };
+const education: string = "National University of Computer and Emerging Sciences";
+const linkedin: string = 'go to my linkedin'
+const careerUpdateHeading: string = "career update";
+const careerUpdate: string = `im learning how to set up graphql with node.js using apollo client`;
+export {linkedin, mainStr, skills, careerUpdate, careerUpdateHeading, education };

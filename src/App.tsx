@@ -9,9 +9,25 @@ import {
   Main,
   Footer,
   ThreeBoxes,
+  TextInBox,
+  LogoText,
+  BoxPadding,
+  LinkedInButton,
+  SkillsText,
 } from "./shared/styles";
 import { capital } from "./shared/utils";
-import { mainStr, subStr } from "./shared/constants";
+import {
+  careerUpdate,
+  careerUpdateHeading,
+  mainStr,
+  skills,
+  education,
+  linkedin,
+} from "./shared/constants";
+
+//TODO clean up
+//TODO code splitting
+//TODO fix styled component prop bug
 
 function App() {
   return (
@@ -19,7 +35,9 @@ function App() {
       <HomePageLayout>
         <Header>
           <LRPads>
-            <MainText>{capital(`hammad`)}</MainText>
+            <div style={{ display: "flex" }}>
+              <LogoText>{capital(`hammad`)}</LogoText>
+            </div>
           </LRPads>
         </Header>
         <Main>
@@ -30,35 +48,51 @@ function App() {
                 flexDirection: "column",
                 justifyContent: "space-between",
                 alignItems: "flex-start",
+                padding: "var(--p05) 0",
+                rowGap: "5%"
               }}
             >
               <MainText>{capital(mainStr)}</MainText>
 
-              <h5>{subStr}</h5>
+              <SkillsText>{skills}</SkillsText>
+
+              <LinkedInButton>{linkedin}</LinkedInButton>
             </div>
           </LRPads>
         </Main>
         <Footer>
           <ThreeBoxes>
-            <div style={{
-              borderRight: "1px solid white"
-            }}>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse
-              unde inventore necessitatibus exercitationem 
-            </div>
-            <div style={{
-              borderRight: "1px solid white"
-            }}>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse
-              unde inventore necessitatibus exercitationem temporibus, obcaecati
-              dicta nesciunt minima dolorum doloremque ut
+            <div
+              style={{
+                borderRight: "1px solid white",
+              }}
+            >
+              <BoxPadding>
+                <TextInBox>{capital(education)}</TextInBox>
+              </BoxPadding>
             </div>
             <div
-            style={{
-              background: "var(--green)"
-            }}>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse
-              unde inventore necessitatibus exercitationem temporibus,
+              style={{
+                borderRight: "1px solid white",
+              }}
+            >
+              <BoxPadding>
+                <TextInBox>{capital(education)}</TextInBox>
+              </BoxPadding>
+            </div>
+            <div
+              style={{
+                background: "var(--green)",
+              }}
+            >
+              <BoxPadding>
+                <div
+                  style={{ background: "var(--white)", color: "var(--blue)" }}
+                >
+                  {capital(careerUpdateHeading)}
+                </div>
+                <TextInBox accent>{capital(careerUpdate)}</TextInBox>
+              </BoxPadding>
             </div>
           </ThreeBoxes>
         </Footer>
