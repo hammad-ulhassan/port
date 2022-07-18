@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400&family=Roboto:ital,wght@0,300;1,300&display=swap');
+
 :root {
   --blue: #1D1DFB;
   --dark-blue: #0A032D;
@@ -16,14 +18,21 @@
   --w700: 700;
   --w900: 900;
 
+  --p05: 5%;
+  --p10: 10%;
+  --p15: 15%;
+  --p20: 20%;
+  --p25: 25%;
+  --p30: 30%;
+
 }
-html{
+
+html {
   font-size: var(--x20);
 }
 
-body{
+body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Mono', monospace;
   background-color: var(--blue);
 }
-
